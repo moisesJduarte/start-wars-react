@@ -1,4 +1,7 @@
 import React from 'react';
+import NavBar from './Navbar';
+
+
 
 class StarWars extends React.Component {
     constructor() {
@@ -14,6 +17,8 @@ class StarWars extends React.Component {
             films: [],
         };
     }
+
+
 
     getNewCharacter() {
         const randomNumber = Math.ceil(Math.random() * 83);
@@ -34,33 +39,39 @@ class StarWars extends React.Component {
             });
     }
 
+
+
+
     render() {
         return (
-            <div>
-                <header className="header">
-                    <h1>Star Wars Character Randomizer</h1>
-                </header>
-                <main className="main">
-                    <div className="character-container">
-                        {this.state.loadedCharacter && (
-                            <div className="character-card">
-                                <img src={this.state.imageUrl} alt={this.state.name} className="character-img" />
-                                <h2>{this.state.name}</h2>
-                                <p>Height: {this.state.height} m</p>
-                                <p>Homeworld: {this.state.homeworld}</p>
-                                <p>Gender: {this.state.gender}</p>
-                                <p>Species: {this.state.species}</p>
-                            </div>
-                        )}
-                    </div>
-                    <button
-                        type="button"
-                        onClick={() => this.getNewCharacter()}
-                        className="btn"
-                    >
-                        Randomize Character
-                    </button>
-                </main>
+            <div className="main-container">
+                <NavBar />
+                <div className="content">
+                    <header className="header">
+                        <h1>Star Wars Character Randomizer</h1>
+                    </header>
+                    <main className="main">
+                        <div className="character-container">
+                            {this.state.loadedCharacter && (
+                                <div className="character-card">
+                                    <img src={this.state.imageUrl} alt={this.state.name} className="character-img" />
+                                    <h2>{this.state.name}</h2>
+                                    <p>Height: {this.state.height} m</p>
+                                    <p>Homeworld: {this.state.homeworld}</p>
+                                    <p>Gender: {this.state.gender}</p>
+                                    <p>Species: {this.state.species}</p>
+                                </div>
+                            )}
+                        </div>
+                        <button
+                            type="button"
+                            onClick={() => this.getNewCharacter()}
+                            className="btn"
+                        >
+                            Randomize Character
+                        </button>
+                    </main>
+                </div>
             </div>
         );
     }
