@@ -2,7 +2,7 @@
 
 .sidebar {
   height: 100%;
-  width: 250px;
+  width: 215px;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,6 +12,7 @@
   z-index: 1000;
   font-family: "Star Jedi", sans-serif;
   color: #ffcc00;
+  transition: transform 0.3s ease;
 }
 
 .sidebar h2 {
@@ -70,4 +71,41 @@
 
 .sidebar-footer a:hover {
   color: #ffffff;
+}
+
+/* Responsive Styles */
+.sidebar {
+  transform: translateX(-250px);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 51px;
+  z-index: 1001;
+  background-color: #ffcc00;
+  border: none;
+  color: #000;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@media (min-width: 1000px) {
+  .sidebar {
+    transform: translateX(0);
+  }
+
+  .sidebar-toggle {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  .sidebar-logo {
+    margin-top: 50px;
+  }
 }
