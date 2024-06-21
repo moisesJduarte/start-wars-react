@@ -13,7 +13,7 @@ const NavBar = () => {
             <a href="#" className="sidebar-link">Detail</a>
             <a href="#" className="sidebar-link">Profile</a>
             <div className="sidebar-footer">
-                Creado por <a href="https://www.linkedin.com/in/moises-duarte-944b26209/" target="_blank" rel="noopener noreferrer">Moises</a>
+                Created by <a href="https://www.linkedin.com/in/moises-duarte-944b26209/" target="_blank" rel="noopener noreferrer">Moises</a>
             </div>
         </div>
     );
