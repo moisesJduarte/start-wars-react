@@ -1,5 +1,4 @@
 import React from 'react';
-import NavBar from './Navbar';
 
 
 
@@ -45,7 +44,7 @@ class StarWars extends React.Component {
     render() {
         return (
             <div className="main-container">
-                <NavBar />
+
                 <div className="content">
                     <header className="header">
                         <h1>Star Wars Character Randomizer</h1>
