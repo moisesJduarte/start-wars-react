@@ -50,3 +50,24 @@
   width: 40%;
   border-radius: 10px;
 }
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #333;
+  color: #ffcc00;
+  font-size: 1rem;
+}
+
+.sidebar-footer a {
+  color: #ffcc00;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.sidebar-footer a:hover {
+  color: #ffffff;
+}
