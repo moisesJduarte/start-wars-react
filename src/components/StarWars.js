@@ -1,7 +1,6 @@
 import React from 'react';
 
 
-
 class StarWars extends React.Component {
     constructor() {
         super();
@@ -16,8 +15,6 @@ class StarWars extends React.Component {
             films: [],
         };
     }
-
-
 
     getNewCharacter() {
         const randomNumber = Math.ceil(Math.random() * 83);
@@ -38,13 +35,9 @@ class StarWars extends React.Component {
             });
     }
 
-
-
-
     render() {
         return (
             <div className="main-container">
-
                 <div className="content">
                     <header className="header">
                         <h1>Star Wars Character Randomizer</h1>
@@ -53,7 +46,9 @@ class StarWars extends React.Component {
                         <div className="character-container">
                             {this.state.loadedCharacter && (
                                 <div className="character-card">
-                                    <img src={this.state.imageUrl} alt={this.state.name} className="character-img" />
+                                    <div className="image-container">
+                                        <img src={this.state.imageUrl} alt={this.state.name} className="character-img" />
+                                    </div>
                                     <h2>{this.state.name}</h2>
                                     <p>Height: {this.state.height} m</p>
                                     <p>Homeworld: {this.state.homeworld}</p>

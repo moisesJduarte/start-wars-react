@@ -26,7 +26,7 @@ const NavBar = () => {
                 </div>
             </div>
             <button className="sidebar-toggle" onClick={toggleSidebar}>
-                {isOpen ? 'Hide Sidebar' : 'Show Sidebar'}
+                {isOpen ? '=' : '='}
             </button>
         </>
     );
